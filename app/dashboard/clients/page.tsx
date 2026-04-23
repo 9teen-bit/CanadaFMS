@@ -50,7 +50,7 @@ export default function ClientsPage() {
         {clientsData.map((client) => (
           <div key={client.id} className="card hover:shadow-lg transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-forest-light rounded-xl">
+              <div className="p-3  rounded-xl">
                 <Building2 className="w-6 h-6 text-forest-primary" />
               </div>
               <div className="flex-1">

@@ -1,13 +1,22 @@
 import type { Metadata } from 'next';
-import { Source_Serif_4 } from 'next/font/google';
+import { Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 
-const sourceSerif = Source_Serif_4({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-source-serif',
-  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-cormorant',
+  weight: ['300', '400', '500', '600', '700'],
   style: ['normal', 'italic'],
   display: 'swap',
+  fallback: ['Georgia', 'Times New Roman', 'serif'],
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  fallback: ['system-ui', '-apple-system', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +39,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sourceSerif.className}>{children}</body>
+      <body className={`${cormorant.variable} ${inter.variable} font-serif antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -128,12 +128,12 @@ export default function FieldReportsPage() {
                   <td className="py-3 px-4 text-sm text-gray-text">{report.block}</td>
                   <td className="py-3 px-4 text-sm text-gray-text">{report.worker}</td>
                   <td className="py-3 px-4 text-sm font-medium text-gray-text">{report.completed_hectares} ha</td>
-                  <td className="py-3 px-4 text-sm font-medium text-gray-text">
+                  <td className="py-3 px-4 text-sm font-medium text-gray-text" suppressHydrationWarning>
                     ${(report.completed_hectares * report.rate_per_hectare).toLocaleString()}
                   </td>
                   <td className="py-3 px-4 text-sm text-gray-500">{report.report_date}</td>
                   <td className="py-3 px-4">
-                    <span className={`inline-flex px-2.5 py-1 rounded-full text-xs font-medium ${
+                    <span className={`inline-flex px-2.5 py-1 rounded text-xs font-medium ${
                       report.status === 'Approved'
                         ? 'bg-green-100 text-green-700'
                         : 'bg-yellow-100 text-yellow-700'

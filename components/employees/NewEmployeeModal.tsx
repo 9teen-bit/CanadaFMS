@@ -46,6 +46,22 @@ const positions = [
     'Other',
 ];
 
+
+const Field = ({
+    id, label, required = true, children, error,
+}: {
+    id: string; label: string; required?: Boolean;
+    children: React.ReactNode; error?: string;
+}) => (
+    <div>
+        <label htmlFor={id} className='block text-sm font-medium text-gray-700 mb-1.5'>{label} {required && <span className="text-red-500 ml-0.5" aria-hidden="true">*</span>}
+        </label>
+        {children}
+        {error && (
+            <p id={`${id}-error`} className='text-xs text-red-500 mt-1' role='alert'>{error}</p>
+        )}
+    </div>
+);
 export function NewEmployeeModal({ isOpen, onClose, onSubmit }: NewEmployeeModalProps) {
     const [form, setForm] = useState<EmployeeFormData>(initialForm);
     const [errors, setErrors] = useState<Partial<EmployeeFormData>>({});
@@ -115,21 +131,6 @@ export function NewEmployeeModal({ isOpen, onClose, onSubmit }: NewEmployeeModal
         `w-full px-4 py-2.5 border rounded-xl text-sm focus:outline-none focus:border-forest-primary transition-colors ${errors[key] ? 'border-red-400 bg-red-50' : 'border-gray-border'
         }`;
 
-    const Field = ({
-        id, label, required = true, children, error,
-    }: {
-        id: string; label: string; required?: Boolean;
-        children: React.ReactNode; error?: string;
-    }) => (
-        <div>
-            <label htmlFor={id} className='block text-sm font-medium text-gray-700 mb-1.5'>{label} {required && <span className="text-red-500 ml-0.5" aria-hidden="true">*</span>}
-            </label>
-            {children}
-            {error && (
-                <p id={`${id}-error`} className='text-xs text-red-500 mt-1' role='alert'>{error}</p>
-            )}
-        </div>
-    );
 
     return (
         <div
@@ -227,6 +228,7 @@ export function NewEmployeeModal({ isOpen, onClose, onSubmit }: NewEmployeeModal
                                     <select
                                         id="position" name="position"
                                         value={form.position} onChange={handleChange}
+                                        aria-label="Position"
                                         aria-required="true"
                                         aria-describedby={errors.position ? 'position-error' : undefined}
                                         className={`${inputClass('position')} bg-white`}
@@ -259,6 +261,7 @@ export function NewEmployeeModal({ isOpen, onClose, onSubmit }: NewEmployeeModal
                                     <input
                                         id="date_of_birth" name="date_of_birth" type="date"
                                         value={form.date_of_birth} onChange={handleChange}
+                                        aria-label="Date of birth"
                                         aria-required="true"
                                         aria-describedby={errors.date_of_birth ? 'date_of_birth-error' : undefined}
                                         className={inputClass('date_of_birth')}

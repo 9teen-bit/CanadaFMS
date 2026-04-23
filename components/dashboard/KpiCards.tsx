@@ -1,4 +1,4 @@
-import { Trees, CheckCircle, Clock, BarChart2, Users, DollarSign, Truck, Home, TrendingUp, TrendingDown, Award, Calendar } from 'lucide-react';
+import { Trees, CheckCircle, Clock, BarChart2, Users, DollarSign, Truck, Home, Award, Calendar } from 'lucide-react';
 
 export function KpiCards() {
   return (
@@ -50,10 +50,10 @@ export function KpiCards() {
           {/* Planned Area Card */}
           <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start justify-between mb-3">
-              <div className="w-10 h-10 bg-forest-light rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center">
                 <Trees className="w-5 h-5 text-forest-primary" />
               </div>
-              <span className="text-xs font-medium bg-green-100 text-green-700 px-2 py-1 rounded-full">
+              <span className="text-xs font-medium  text-green-700 px-2 py-1 rounded-full">
                 64 Blocks
               </span>
             </div>
@@ -67,10 +67,10 @@ export function KpiCards() {
           {/* Completed Blocks Card */}
           <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start justify-between mb-3">
-              <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10  rounded-xl flex items-center justify-center">
                 <CheckCircle className="w-5 h-5 text-green-600" />
               </div>
-              <span className="text-xs font-medium bg-green-100 text-green-700 px-2 py-1 rounded-full">
+              <span className="text-xs font-medium  text-green-700 px-2 py-1 rounded-full">
                 Completed
               </span>
             </div>
@@ -84,10 +84,10 @@ export function KpiCards() {
           {/* Completion Rate Card */}
           <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start justify-between mb-3">
-              <div className="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10  rounded-xl flex items-center justify-center">
                 <Clock className="w-5 h-5 text-amber-600" />
               </div>
-              <span className="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-1 rounded-full">
+              <span className="text-xs font-medium  text-amber-700 px-2 py-1 rounded-full">
                 In Progress
               </span>
             </div>
@@ -101,7 +101,7 @@ export function KpiCards() {
           {/* Average Block Size Card */}
           <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start justify-between mb-3">
-              <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10  rounded-xl flex items-center justify-center">
                 <BarChart2 className="w-5 h-5 text-blue-600" />
               </div>
             </div>
@@ -130,7 +130,7 @@ export function KpiCards() {
                 <p className="text-base font-semibold text-gray-900">Hectares by Contract</p>
                 <p className="text-sm text-gray-500 mt-1">Rexforet (7 contracts) · Hydro Québec (1 contract)</p>
               </div>
-              <span className="text-sm font-semibold bg-forest-light text-forest-primary px-3 py-1 rounded-full">
+              <span className="text-sm font-semibold text-forest-primary px-3 py-1 rounded-full">
                 1,539 ha total
               </span>
             </div>
@@ -165,7 +165,7 @@ export function KpiCards() {
 
           {/* Active Clients Card */}
           <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col">
-            <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4">
               <Truck className="w-5 h-5 text-blue-600" />
             </div>
             <div>
@@ -204,14 +204,14 @@ export function KpiCards() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Workers Deployed Card */}
           <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-10 h-10 bg-forest-light rounded-xl flex items-center justify-center mb-3">
+            <div className="w-10 h-10  rounded-xl flex items-center justify-center mb-3">
               <Users className="w-5 h-5 text-forest-primary" />
             </div>
             <div>
               <p className="text-3xl font-bold text-gray-900">20</p>
               <p className="text-sm text-gray-600 mt-1">Workers Deployed</p>
               <div className="mt-2 flex items-center gap-2">
-                <span className="text-xs font-medium bg-forest-light text-forest-primary px-2 py-0.5 rounded-full">
+                <span className="text-xs font-medium  text-forest-primary px-2 py-0.5 rounded-full">
                   Season 2024
                 </span>
                 <span className="text-xs text-gray-400">167 active days</span>
@@ -222,7 +222,7 @@ export function KpiCards() {
 
           {/* Top Earner Card */}
           <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-10 h-10 bg-forest-light rounded-xl flex items-center justify-center mb-3">
+            <div className="w-10 h-10  rounded-xl flex items-center justify-center mb-3">
               <Award className="w-5 h-5 text-forest-primary" />
             </div>
             <div>
@@ -235,7 +235,7 @@ export function KpiCards() {
 
           {/* Average Earnings Card */}
           <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center mb-3">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3">
               <DollarSign className="w-5 h-5 text-amber-600" />
             </div>
             <div>
@@ -247,14 +247,14 @@ export function KpiCards() {
 
           {/* Subcontractors Card */}
           <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-3">
+            <div className="w-10 h-10  rounded-xl flex items-center justify-center mb-3">
               <Truck className="w-5 h-5 text-blue-600" />
             </div>
             <div>
               <p className="text-3xl font-bold text-gray-900">18</p>
               <p className="text-sm text-gray-600 mt-1">Subcontractor Companies</p>
               <div className="mt-2">
-                <span className="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">
+                <span className="text-xs font-medium  text-blue-700 px-2 py-0.5 rounded-full">
                   Registered
                 </span>
               </div>
@@ -275,7 +275,7 @@ export function KpiCards() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
           {/* Housing Locations Card */}
           <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
-            <div className="w-10 h-10 bg-forest-light rounded-xl flex items-center justify-center mb-3">
+            <div className="w-10 h-10  rounded-xl flex items-center justify-center mb-3">
               <Home className="w-5 h-5 text-forest-primary" />
             </div>
             <div>

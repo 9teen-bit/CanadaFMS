@@ -40,7 +40,7 @@ export default function EmployeesPage() {
 
   const handleSubmit = (data: EmployeeFormData) => {
     console.log('New employee:', data);
-    // wire to your API here
+    // API reserved place
   };
 
   const filteredEmployees = employeesData.filter(emp =>
@@ -86,7 +86,7 @@ export default function EmployeesPage() {
           <div key={employee.id} className="card hover:shadow-lg transition-shadow">
             <div className="flex justify-between items-start mb-4">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-forest-light flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full  flex items-center justify-center">
                   <User className="w-6 h-6 text-forest-primary" aria-hidden="true" />
                 </div>
                 <div>

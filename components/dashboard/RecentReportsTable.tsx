@@ -38,9 +38,9 @@ const recentReports = [
 ];
 
 const statusConfig = {
-  completed: { icon: CheckCircle, color: 'text-green-600', bg: 'bg-green-50', label: 'Completed' },
-  'in-progress': { icon: Clock, color: 'text-blue-600', bg: 'bg-blue-50', label: 'In Progress' },
-  pending: { icon: AlertCircle, color: 'text-yellow-600', bg: 'bg-yellow-50', label: 'Pending' },
+  completed: { icon: CheckCircle, color: 'text-green-600',  label: 'Completed' },
+  'in-progress': { icon: Clock, color: 'text-blue-600', label: 'In Progress' },
+  pending: { icon: AlertCircle, color: 'text-yellow-600', label: 'Pending' },
 };
 
 export function RecentReportsTable() {

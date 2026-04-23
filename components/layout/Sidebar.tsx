@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import {
+import {  
   LayoutDashboard, Trees, FileText, Users, Truck,
   Briefcase, Building2, DollarSign, BarChart3, Settings, X,
   ChevronRight, ChevronDown,
@@ -15,25 +15,25 @@ const navGroups = [
   {
     label: 'Main',
     items: [
-      { name: 'Dashboard',     href: '/dashboard',               icon: LayoutDashboard },
-      { name: 'Projects',      href: '/dashboard/projects',      icon: Trees,     badge: '3' },
+      { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+      { name: 'Projects',  href: '/dashboard/projects', icon: Trees, badge: '3' },
       { name: 'Field Reports', href: '/dashboard/field-reports', icon: FileText,  badge: '12' },
     ],
   },
   {
     label: 'Workforce',
     items: [
-      { name: 'Employees',      href: '/dashboard/employees',      icon: Users,  badge: '20' },
+      { name: 'Employees', href: '/dashboard/employees', icon: Users, badge: '20' },
       { name: 'Subcontractors', href: '/dashboard/subcontractors', icon: Truck,  badge: '18' },
-      { name: 'Clients',        href: '/dashboard/clients',        icon: Briefcase },
+      { name: 'Clients', href: '/dashboard/clients', icon: Briefcase },
     ],
   },
   {
     label: 'Operations',
     items: [
-      { name: 'Accommodation',    href: '/dashboard/accommodation',   icon: Building2 },
-      { name: 'Finance & Payroll',href: '/dashboard/finance-payroll', icon: DollarSign },
-      { name: 'Analytics',        href: '/dashboard/analytics',       icon: BarChart3 },
+      { name: 'Accommodation', href: '/dashboard/accommodation', icon: Building2 },
+      { name: 'Finance & Payroll', href: '/dashboard/finance-payroll', icon: DollarSign },
+      { name: 'Analytics', href: '/dashboard/analytics', icon: BarChart3 },
     ],
   },
   {
@@ -129,7 +129,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </p>
                   <ChevronDown 
                     className={cn(
-                      "w-3 h-3 text-gray-400 transition-transform duration-200",
+                      "w-3 h-3 text-gray-500 transition-transform duration-200",
                       isExpanded ? "rotate-0" : "-rotate-90"
                     )}
                   />
@@ -190,27 +190,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         })}
       </nav>
 
-      {/* ── User Footer - More Professional ── */}
-      <div className="px-3 py-3 border-t border-gray-100 bg-gray-50/30">
-        <button
-          type="button"
-          aria-label="Open profile menu"
-          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-white transition-all duration-200 group"
-        >
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-forest-primary to-forest-dark flex items-center justify-center text-white text-xs font-semibold shadow-sm shrink-0">
-            RI
-          </div>
-          <div className="flex-1 text-left min-w-0">
-            <p className="text-sm font-semibold text-gray-800 truncate">Romain Ishimwe</p>
-            <p className="text-[11px] text-gray-500 truncate">Forestry Manager</p>
-          </div>
-          <ChevronRight
-            className="w-3.5 h-3.5 text-gray-300 group-hover:text-gray-500 transition-colors shrink-0"
-            aria-hidden="true"
-          />
-        </button>
-      </div>
-
     </div>
   );
 
@@ -242,4 +221,4 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       </aside>
     </>
   );
-}
+};

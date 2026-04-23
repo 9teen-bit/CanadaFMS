@@ -46,7 +46,7 @@ export default function ProjectsPage() {
   const [modalOpen, setModalOpen]     = useState(false);
 
   const handleCreateProject = (data: ProjectFormData) => {
-    // wire to your API here — for now just log it
+    // API reserverd place
     console.log('New project:', data);
   };
 
@@ -106,7 +106,7 @@ export default function ProjectsPage() {
           <div key={project.id} className="card hover:shadow-lg transition-shadow">
             <div className="flex justify-between items-start mb-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-forest-light rounded-xl" aria-hidden="true">
+                <div className="p-2  rounded-xl" aria-hidden="true">
                   <Trees className="w-5 h-5 text-forest-primary" />
                 </div>
                 <div>
@@ -156,7 +156,7 @@ export default function ProjectsPage() {
               </div>
 
               <div className="pt-3">
-                <span className={`inline-flex px-2.5 py-1 rounded-full text-xs font-medium ${
+                <span className={`inline-flex px-2.5 py-1 rounded text-xs font-medium ${
                   project.status === 'Completed' 
                     ? 'bg-green-100 text-green-700'
                     : 'bg-blue-100 text-blue-700'
